@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    --primary-bgcolor: #202020a9;
+}
+
+
+
+html{
+    font-size: 62.50%;
+    font-family: Roboto;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+
+}
+/* body{
+    overflow: hidden;
+} */
+.main-section{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color:black;
+    padding: 10px;
+    user-select: none;
+    overflow: hidden;
+}
+.main-container{
+    width: 100%;
+    height: 84vh;
+    display: flex;
+    gap: 8px;
+    background-color: black;
+    color: white;
+
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+
+}
+.left-container{
+    width: 23%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+justify-content: space-between;
+
+}
+.left-container img{
+filter: invert();
+}
+.top-menu{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-size: 2rem;
+padding: 10px 20px;
+background-color: var(--primary-bgcolor);
+border-radius: 10px;
+}
+
+.home{
+    display: flex;
+
+    
+}
+
+.top-menu img{
+    width: 22px;
+}
+.logo img{
+width:80px;
+}
+
+.search {
+    display: flex;
+    gap: 20px;
+    opacity: .6;
+    font-size: 1.6rem;
+}
+.home  {
+    display: flex;
+    gap: 20px;
+    font-size: 1.6rem;
+}
+.home img{
+    margin: 0px 14px -3px 0;
+}
+.search img{
+    margin: 0px 18px -3px 0;
+}
+.search:hover{
+    opacity: 1;
+}
+
+.about-playlist{
+    background-color: var(--primary-bgcolor);
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+
+}
+
+
+.btn{
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.6rem;
+    opacity: .6;
+    transition: all 400ms;
+}
+.library{
+    display: flex;
+justify-content: space-between;
+padding: 15px 15px;
+position: relative;
+}
+.library img{
+    width:25px;
+margin-bottom: -5px;
+}
+.library a:nth-child(1) img{
+margin-right: 17px;
+
+
+}
+.library a:nth-child(2){
+    padding: 5px 6px;
+    border-radius: 40%;
+}
+
+.library a:nth-child(2) img{
+    width: 18px;
+    margin-bottom: unset;
+
+
+
+}
+.library a:nth-child(2):hover{
+    background-color: rgb(20, 20, 22);
+
+
+}
+ /* library and add playlist hover box start */
+
+.hover-box{
+    position: absolute;
+    top:-25px;
+    font-size: 1.5rem;
+    background-color: rgb(43, 42, 42);
+    color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    transition: all 500ms ease-in-out;
+}
+.add-playlist-hover{
+    right: -30px;}
+.library-hover{
+    left: 30px;
+}
+.library a:nth-child(2):hover ~.add-playlist-hover{
+    display: block;
+} 
+.library a:nth-child(1):hover ~.library-hover{
+    display: block;
+} 
+
+ /* library and add playlist hover box end */
+
+
+
+
+      /* scroller design color and other style start */
+
+  ::-webkit-scrollbar{
+    opacity: 0;
+    width: 12px;
+
+  }    
+     :hover::-webkit-scrollbar{
+    background-color: rgba(41, 39, 39, 0.747);
+    width: 12px;
+    overflow: hidden;
+
+}
+.create-playlist:hover::-webkit-scrollbar-thumb{
+    background: rgba(57, 59, 57, 0.808);
+
+}
+      /* scroller design color and other style end */
+
+.create-playlist{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    font-size: 1.3rem;
+    line-height: 25px;
+padding: 5px 2px 5px 8px;
+    word-spacing: 2px;
+    transition: all 1s ease-in-out;
+}
+
+.playlist{
+    background-color: rgb(34, 33, 33);
+    padding: 15px;
+border-radius: 10px;
+margin: 10px 0 20px 0;
+}
+.playlist-btn {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 1.5rem;
+transition: all 500ms;
+    padding: 5px 15px;
+    background: white;
+    color: black;
+    margin: 15px 0px;
+    border-radius:30px;
+    cursor: pointer;
+}
+ .playlist .playlist-btn:hover{
+    transform: scale(1.06);
+}
+.about-term{
+    display: flex;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 20px 0;
+    line-height: 25px;
+    color: rgb(51, 47, 47);
+
+}
+.about-term a {
+margin: 0px 15px 0 0;
+color: rgb(180, 171, 171);}
+.btn-lang{
+    padding:  0 20px;
+
+}
+
+.language:hover{
+    transform: scale(1.06);
+}
+.btn-lang img{
+    width: 20px;
+    margin:0px 8px -3px 0px;
+    cursor: pointer;
+
+}
+.language {
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    border-radius: 30px;
+    background-color: #31303000;
+    color: rgb(180, 171, 171);
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+
+
+}
+ .btn:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+   /* right container css start */
+
+
+
+.right-container{
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.right-container .rightbox-content:hover::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top,red,yellow,white,pink);
+
+}
+
+
+     /* top content css start */
+.right-top{
+    width: 100%;
+    height: 67px;
+    background-color: rgba(19, 18, 18, 0.918);
+    display: flex;
+justify-content: space-between ;
+padding: 10px 25px;
+font-size: 1.6rem;
+position: sticky;
+top: 0;
+z-index: 99;
+}
+.change-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+.change-btn img{
+    filter: invert();
+    height: 17px;
+    width: auto;
+    opacity: .7;
+
+}
+
+.next-btn{
+
+border-radius: 50%;
+margin-left: 10px;
+padding: 6px;
+background: rgba(22, 22, 22, 1);
+cursor: pointer;
+}
+.pre-btn{
+border-radius: 50%;
+padding: 6px;
+background: rgba(22, 22, 22, 1);
+cursor: pointer;
+
+}
+
+.make-account{
+    display: flex;
+}
+.login-btn{
+    padding: 13px 25px;
+    background-color: aliceblue;
+    border-radius: 40px;
+    font-weight: 600;
+
+}
+.login-btn a{
+    color: black;
+    padding: 15px 10px;
+}
+.signup-account-btn{
+    padding: 13px 30px;
+    opacity: .6;
+}
+.signup-account-btn:hover{opacity: 1;scale: 1.05;}
+.login-btn:hover{opacity: .9; scale: 1.05;}
+
+     /* .right-container musisc content and music */
+     .rightbox-content{
+        overflow-y: scroll;
+        background-color: rgba(43, 41, 41, 0.685);
+     }
+.playlist-heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    font-size: 1.5rem;
+}
+.playlist-heading div:last-child a{
+    color: rgba(175, 169, 169, 0.89);
+}
+.playlist-heading div:last-child{
+  padding-top: 13px;
+  font-size: 1.4rem;
+
+}
+.playlist-heading div:last-child a:hover{
+    color: rgba(175, 169, 169, 0.959);
+    text-decoration: underline;
+
+}
+.playlist-heading div:first-child a:hover{
+    text-decoration: underline;
+
+}
+
+.allmusic-card{
+    padding:10px 25px;
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+}
+
+.music-card{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    padding: 10px 15px;
+    background: var(--primary-bgcolor);
+    border-radius: 15px;
+    position: relative;
+    
+}
+.music-image img{
+    width: 100%;
+    border-radius: 6PX;
+}
+.music-content{
+    font-size: 1.5rem;
+    line-height: 20px;
+}
+.music-content a{
+    font-weight: 800;
+    font-size: 1.6rem;
+
+    margin: 10px 0 5px 0;
+    display: inline-block;
+}
+.music-content p{
+    display: inline-block;
+    color: rgb(231, 224, 224);
+    opacity: .6;
+}
+
+
+ .music-card .music-button{
+background: none;    position: absolute;
+    top: 50%;
+    right: 15%;
+    width: 45px;
+    background: rgb(18, 226, 70);
+    border-radius: 50%;
+    padding: 8px;
+transition: all 200ms ;
+opacity: 0;
+cursor: pointer;
+}
+.music-button img{
+    width: 25px;
+}
+
+.music-card:hover .music-button{
+    opacity: 1;
+    top: 40%;
+}
+.music-card:hover {
+    background: rgba(46, 45, 45, 0.685);
+}
+.music-button:hover{
+    transform: scale(1.09);
+}
+
+    /* currently playing music card css start  */
+    .play-music-card{
+position: absolute;
+bottom: 90px;
+right: -10px;
+        width: 150px;
+        height: 150px ;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid wheat;
+        padding: 8px;
+        font-size: 1rem;
+        background: linear-gradient(to top,black ,rgb(104, 88, 88) ,rgb(149, 194, 123) );
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(189, 184, 184, 0.89) , -1.5px 1.5px 5px rgba(221, 205, 175, 0.856);
+        text-transform: capitalize;
+        opacity: 0;
+        z-index: 99;
+        transition: all 800ms ease-in-out;
+        display: none;
+    }
+
+     /* direct make  css properties of  classes start */
+     .opacity{
+        opacity: 1 ;
+    }
+    .vigibility{
+        visibility: hidden;
+    }
+
+     /* directt css properties classes end */
+
+    .music-img{
+        width: 100%;
+        height: 75px;
+        margin-bottom: 5px;
+    }
+    .music-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+
+    }
+    .m-card-close{
+        width: 22px;
+        height: 22px;
+        background: rgb(139, 139, 134);
+        border: none;
+        border-radius: 10px;
+        color: aquamarine;
+        font-size: 2rem;
+        position: absolute;
+        right: 0px;
+        margin: 2px;
+        cursor: pointer;
+        top: 10px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+    .music-progress{
+        font-size: .8rem;
+    }
+progress{
+    background-color: rgba(255, 0, 0, 0);
+
+}
+    progress::-webkit-progress-bar{
+        background-color: rgba(64, 252, 7, 0.199) !important;
+        border-radius: 10px;
+        cursor: pointer;
+
+    }
+    progress::-webkit-progress-value {background-color: rgb(196, 13, 83) !important;
+    }
+
+    .music-controller{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        gap: 14px;
+        margin-top: 4px;
+        font-weight: 600;
+        padding-bottom:3px ;
+
+    }
+    .m-prebtn,.m-playbtn,.m-pausebtn,.m-nextbtn{
+        cursor: pointer;
+        color:aquamarine;
+        border-radius: 50%;
+        padding: 0 3px;
+        width: 25px;
+
+    }
+    .m-pausebtn{
+        rotate: 90deg;
+        font-size: 1.9rem;
+        display: none;
+        padding: 5px 3px 3px 2px;
+    }
+    /* currently playing music card css end */
+
+
+
+   /* about and support contents css :start */
+.about-support{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 25px 20px 25px;
+    font-size: 1.5rem;
+}
+.c-about{
+    width: 70%;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+.c-about ul li{
+list-style-type: none;
+margin: 10px 0;
+}
+.c-about ul li a{
+    color: rgba(175, 169, 169, 0.89);
+}
+.c-about ul li:first-child a{
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: aliceblue;
+    cursor: unset;
+}
+.c-about ul li a:hover:not(ul li:first-child a){
+    color: rgba(248, 245, 245, 0.89);
+    text-decoration: underline;
+}
+
+/* .c-about ul:not(li){
+    color: blue;
+    background-color: aqua;
+} */
+
+.social-contact{
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.social-icon{
+    width: 40px;
+    height: 40px;
+border-radius: 50%;
+    padding: 10px;
+    background-color:rgba(44, 43, 43, 0.808) ;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+.social-icon:hover {
+    background-color:rgba(107, 103, 103, 0.808) ;
+
+ border-radius: 20px;
+}
+.social-icon img{
+    width: 100%;
+    filter:invert();
+}
+
+
+.line-copyright{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 25px;
+    font-size: 1.5rem;
+}
+hr{
+    width: 100%;
+    height: 0.1px;
+    border: 0px;
+    background: rgba(63, 61, 61, 0.671);
+    margin: 20px 0;
+    
+
+}
+.copyright{
+    margin: 15px 0;
+    color: rgba(175, 169, 169, 0.89);
+    text-indent: 5px;
+
+}
+ 
+    /* signup box colour full down box ads type */
+
+
+.singup-box{
+    width: 100%;
+    height: 11vh;
+    color: white;
+    background-color: var(--primary-bgcolor);
+    background: linear-gradient(to left ,rgb(70, 172, 219),rgb(208, 67, 226));
+    padding: 12px 20px;
+    font-size: 1.5rem;
+    word-spacing: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+
+}
+
+
+.signup-btn a{
+    background-color: rgb(252, 249, 245);
+    color: rgb(22, 21, 21);
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin-left: 20px;
+    display: inline-block;
+    font-weight: 700;
+}
+.signup-btn a:hover{
+    transform: scale(1.04);
+}
+
+
+
+
+
+
+
+
+
+
+
+      /* responsive css start  spotify clone */
+ @media (max-width:750px){
+    .main-container{
+        flex-direction: column;
+        height: auto;
+    }
+    .right-container{
+        width: 100%;
+        height: 450px;
+
+    }
+    .left-container{
+        width: 100%;
+        height: auto;
+    }
+
+    /* container left side css  */
+
+    /* library css  */
+    .add-playlist-hover{
+        right: 20px;}
+    /* container left side css  end */
+
+ /* container right side css start  */
+ .allmusic-card{
+    flex-wrap: wrap;
+ }
+ .music-card{
+    width: 200px;
+ }
+    .about-support{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .c-about{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .social-contact{
+        width: 100%;
+        /* justify-content: flex-start; */
+    }
+
+
+    /* ads signup box css  */
+    .singup-box{
+        height: auto;
+    }
+
+ }
