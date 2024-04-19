@@ -748,7 +748,8 @@ hr{
         height: auto;
     }
 .play-music-card{
-bottom: -350px;
+    position:fixed;
+bottom: -450px;
 
     }
  }
